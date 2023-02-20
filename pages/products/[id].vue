@@ -4,7 +4,7 @@
         <p>Product details:</p>
         <ul>
             <li>ID: {{ id }}</li>
-            <li>Product ID: {{ id }}</li>
+            <li>Price: {{ product.price }}$</li>
         </ul>
     </div>
 </template>
@@ -18,4 +18,7 @@
     
     // fetch product details
     const { data: product } = await useFetch(uri)
+    // if always appears the same product info is becouse the fetch only starts one time
+    // if you specify the id in te useFetch it detects when the ID cahnges
+    // const { data: product } = await useFetch(uri, { key: id })
 </script>
