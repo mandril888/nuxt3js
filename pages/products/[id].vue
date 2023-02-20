@@ -1,6 +1,5 @@
 <template>
     <div>
-        <HeaderApp></HeaderApp>
         <p>Product details:</p>
         <ul>
             <li>ID: {{ id }}</li>
@@ -9,10 +8,8 @@
 </template>
 
 <script setup>
-    import HeaderApp from "/components/HeaderApp"
+    definePageMeta({
+        layout: 'products'
+    })
     const { id } = useRoute().params
 </script>
-
-<style lang="scss" scoped>
-
-</style>

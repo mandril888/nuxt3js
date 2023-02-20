@@ -11,3 +11,9 @@
         </header>
     </div>
 </template>
+
+<style scoped>
+.router-link-exact-active {
+    color: green;
+}
+</style>
