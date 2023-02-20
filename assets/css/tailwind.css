@@ -8,7 +8,6 @@ body {
 
 @layer components {
     .btn {
-        /* @apply bg-green-600 text-white px-3 py-2 raounded-md text-sm; */
         @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm;
     }
 }
