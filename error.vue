@@ -11,4 +11,11 @@
     defineProps(['error'])
 
     const handleClearError = () => clearError ({ redirect: '/'})
+
+    useHead({
+        title: 'Error page | Nuxt 3 JS',
+        meta: [
+            { name: 'description', content: 'Error page, sorry!' }
+        ],
+    })
 </script>

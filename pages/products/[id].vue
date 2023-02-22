@@ -1,5 +1,9 @@
 <template>
     <div>
+        <Head>
+            <Title>{{ product.title }} | Nuxt 3 JS</Title>
+            <Meta name="description" :content="product.description" />
+        </Head>
         <ProductDetails :product="product" />
     </div>
 </template>
@@ -13,8 +17,8 @@
     
     // fetch product details
     const { data: product } = await useFetch(uri)
-    // if always appears the same product info is becouse the fetch only starts one time
-    // if you specify the id in te useFetch it detects when the ID cahnges
+    // if always appears the same product info is because the fetch only starts one time
+    // if you specify the id in te useFetch it detects when the ID changes
     // const { data: product } = await useFetch(uri, { key: id })
 
     if (!product.value) {
