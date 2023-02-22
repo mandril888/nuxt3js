@@ -12,8 +12,12 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .router-link-exact-active {
     color: green;
+    
+    &.btn {
+        color: black;
+    }
 }
 </style>

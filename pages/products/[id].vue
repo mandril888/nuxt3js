@@ -1,11 +1,6 @@
 <template>
     <div>
-        <h1>{{ product.title }}</h1>
-        <p>Product details:</p>
-        <ul>
-            <li>ID: {{ id }}</li>
-            <li>Price: {{ product.price }}$</li>
-        </ul>
+        <ProductDetails :product="product" />
     </div>
 </template>
 
