@@ -16,4 +16,9 @@
     // if always appears the same product info is becouse the fetch only starts one time
     // if you specify the id in te useFetch it detects when the ID cahnges
     // const { data: product } = await useFetch(uri, { key: id })
+
+    if (!product.value) {
+        // 'fatal' is used to throw the error in the client side
+        throw createError({ statusCode: 404, statusMessage: 'Product not found', fatal: true })
+    }
 </script>
