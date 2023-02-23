@@ -7,7 +7,10 @@ export default defineEventHandler ( async(e) => {
     const { age } = await readBody(e)
 
     // api call with private key
-    const { data } = await $fetch('https://api.currencyapi.com/v3/latest?apikey=TmEBEaNVTQq6rJFaIOVtlVVzk7GiV8JxagTVDyXe')
+    // const currencyApiKey = process.env.CURRENCY_API_KEY
+    const { currencyApiKey } = useRuntimeConfig()
+    const uri = `https://api.currencyapi.com/v3/latest?apikey=${currencyApiKey}`
+    const { data } = await $fetch(uri)
 
     return {
         message: `Testing server routes => ${name} & ${age}`,
